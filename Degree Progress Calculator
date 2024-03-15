@@ -1,0 +1,19 @@
+print('Enter student name: ')
+StudentName = input()
+
+print('Enter degree name: ')
+DegreeName = input()
+
+print('Enter total number of credits required in the degree program: ')
+TotalCreditsRequired = input()
+
+print('Enter number of credits completed: ')
+CreditsCompleted = input()
+
+RemainingCredits = int(TotalCreditsRequired) - int(CreditsCompleted)
+
+
+
+print('The student\'s name is', StudentName)
+print('The degree program is', DegreeName)
+print('The number of remaining credits left to graduate is', RemainingCredits)
