@@ -1,0 +1,62 @@
+#Write a program that asks the user to enter five test scores.
+#The program should display a letter grade for each score and the average
+#test score. Write the following functions in the program:
+
+#calc_average. This function should accept five test scores as arguments
+#and return the average of the scores.
+
+#determine_grade. This function should accept a test score as an argument
+#and return a letter grade for the score based on the following grading
+#scale:
+        #Score 	Letter Grade
+        # 90–100 	A
+        # 80–89 	B
+        # 70–79 	C
+        # 60–69 	D
+        # Below 60 	F
+    
+def main ():
+    test_one = int(input("Please enter the score (0-100) of test 1: "))
+    test_two = int(input("Please enter the score (0-100) of test 2: "))
+    test_three = int(input("Please enter the score (0-100) of test 3: "))
+    test_four = int(input("Please enter the score (0-100) of test 4: "))
+    test_five = int(input("Please enter the score (0-100) of test 5: "))
+
+        
+    def calc_average (test_one, test_two, test_three, test_four, test_five):
+        average = (test_one + test_two + test_three + test_four + test_five)/5
+        return average
+        
+    #function to return the letter grade    
+    def determine_grade (test):
+        if test < 60:
+            letter = "F"
+        elif 60 <= test <= 69:
+            letter = "D"
+        elif 70 <= test <= 79:
+            letter = "C"
+        elif 80 <= test <= 89:
+            letter = "B"
+        elif 90 <= test <= 100:
+            letter = "A"
+        else:
+            letter= "Unknown"
+        return letter
+    
+    letter_one = determine_grade(test_one)
+    letter_two = determine_grade(test_two)
+    letter_three = determine_grade(test_three)
+    letter_four = determine_grade(test_four)
+    letter_five = determine_grade(test_five)
+    average = calc_average (test_one, test_two, test_three, test_four, test_five)
+    
+    print(test_one, letter_one)
+    print(test_two, letter_two)
+    print(test_three, letter_three)
+    print(test_four, letter_four)
+    print(test_five, letter_five)
+    print("Average:" , average)
+
+    
+   
+main()
