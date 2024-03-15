@@ -1,0 +1,48 @@
+#Modify the program that you wrote for Exercise 6 so it handles the following
+#exceptions:
+#It should handle any IOError exceptions that are raised when the file is
+#opened and data is read from it.
+#It should handle any ValueError exceptions that are raised when the items
+#that are read from the file are converted to a number.
+
+def main():
+    try:
+        #open a file named numbers.txt
+        num_file = open('numbers.txt', 'r')
+    
+    #initialize an accumulator to 0 
+        total = 0
+    
+    #initialize a variable to keep count of the numbers 
+        count = 0
+    
+    #get values from the file and calculate average
+        for line in num_file:
+        #convert a line to an float
+                num= float(line)
+
+        #add 1 to the count variable
+                count += 1
+
+        #record how many numbers 
+                total += num
+
+    #calculate average     
+        average = total / count
+
+    #close file
+        num_file.close()
+
+    #print average
+        print(format(average, ',.2f'))
+
+    except ValueError:
+        print('Error: One or more of the items in the file were not able to'
+              ' be converted to a number')
+
+    except IOError:
+        print('An error occured trying to read the file.')
+
+#run
+if __name__ == '__main__':
+    main()
