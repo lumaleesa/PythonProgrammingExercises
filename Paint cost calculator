@@ -1,0 +1,24 @@
+def main():
+    squareFeet = float(input('Enter the square feet of wall space to be painted: '))
+    paintPrice = float(input('Enter the price of paint per gallon: $'))
+    calculatePaintAndLabor(squareFeet, paintPrice)
+
+def calculatePaintAndLabor(squareFeet, paintPrice):
+    gallonsOfPaint = squareFeet / 115
+    hoursOfLabor = squareFeet / 115 * 8
+    paintCost = gallonsOfPaint * paintPrice
+    laborCharges = hoursOfLabor * 20
+    totalCost = paintCost + laborCharges
+# Format decimal values to 2 decimal places using format()
+    gallonsOfPaint = format(gallonsOfPaint, '.2f')
+    hoursOfLabor = format(hoursOfLabor, '.2f')
+    paintCost = format(paintCost, '.2f')
+    laborCharges = format(laborCharges, '.2f')
+    totalCost = format(totalCost, '.2f')
+    print('Number of gallons of paint required:', gallonsOfPaint)
+    print('Hours of labor required:', hoursOfLabor)
+    print('Cost of the paint: $', paintCost)
+    print('Labor charges: $', laborCharges)
+    print('Total cost of the paint job: $', totalCost)
+main()
+
