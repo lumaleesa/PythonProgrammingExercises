@@ -1,0 +1,47 @@
+print('"Waste does not exist in nature because ecosystems reuse everything'
+' that grows in a never-ending cycle of efficiency and purpose."'
+'~Frans van Houten')
+
+# Initialize the accumulator.
+total = 0
+
+# Get the bottles collected for each day. 
+for day in range (1, 8) :
+
+#Prompt the user. 
+    print('\n Enter the bottles collected on day', day)
+    
+    # Input the number of bottles.
+    bottles = int(input())
+    
+    # Add bottles to total
+    total += bottles
+
+# Display total bottles
+print('\n Great job!! You collected a total of', total, 'bottles this'
+' week.' )
+
+# If 7 bottles or less were collected 
+if total <=7 :
+    print('\n It\'s a good practice to set a weekly'
+        ' bottle count goal. Then, strive to achieve it!' 
+        ' You can do it!', total, 'bottles in one week is something to be proud'
+        ' of! \n It\'s a great start! You\'re really making a difference!')
+        
+# If more than 7 but less than 51 bottles were collected         
+if total >=8 and total <=50 :
+    print('\n Awesome! Keep up the good work!', total, 'bottles collected' 
+    ' in one week is great! You\'re really making a difference and the environment thanks'
+    ' you!')
+ 
+# If more than 50 bottles were collected 
+if total >50 :
+    print('\n AMAZING JOB! The environment thanks you for collecting '
+    ,total, 'bottles! You really make a difference!! <3')
+    print('\n You\'ve earned yourself some fun recycle slogans! Buckle up!')
+    print('\n 1. Don\'t be a punk! Recycle your junk!')
+    print('\n 2. Got pollution? Be the solution!...RECYCLE!')
+    print('\n 3. You are a mean, green, recycling machine!') 
+    print('\n 4. Reuse aluminum. Why? Because you CAN!')
+    print('\n 5. Mom says recycle')
+    print('\n See ya next week!')
