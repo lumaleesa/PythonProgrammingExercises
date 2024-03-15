@@ -1,0 +1,24 @@
+#Write a program with a loop that asks the user to enter a series of positive
+#numbers. The user should enter a negative number to signal the end of the
+#series. After all the positive numbers have been entered, the program should
+#display their sum.
+
+#explain the program to the user
+print("This program will ask the user to input a series of numbers and then"
+      " will calculate the sum. To signal the end of the series, please enter"
+      " a negative numner. This will end the prompt and display the sum of"
+      " the series of numbers entered. \n")
+      
+#ask the user to input a positive number
+num = int(input("Enter a number: "))
+      
+#Initialize an accumulator variable
+total = 0
+
+#loop to obtain input and calculate series of numbers
+while num >= 0:
+        total += num
+        num = int(input("Enter another number: "))
+
+#output
+print(total)
