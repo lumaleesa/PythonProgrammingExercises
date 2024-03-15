@@ -1,0 +1,38 @@
+#6. Average of Numbers
+#Assume a file containing a series of integers is named numbers.txt and exists on the computer’s disk.
+#Write a program that calculates the average of all the numbers stored in the file.
+
+
+def main():
+#open a file named numbers.txt
+    num_file = open('numbers.txt', 'r')
+    
+    #initialize an accumulator to 0 
+    total = 0
+    
+    #initialize a variable to keep count of the numbers 
+    count = 0
+    
+    #get values from the file and calculate average
+    for line in num_file:
+        #convert a line to an float
+        num= float(line)
+
+        #add 1 to the count variable
+        count += 1
+
+        #record how many numbers 
+        total += num
+
+    #calculate average     
+    average = total / count
+
+    #close file
+    num_file.close()
+
+    #print average
+    print(format(average, ',.2f'))
+
+#run
+if __name__ == '__main__':
+    main()
