@@ -1,0 +1,21 @@
+import random
+
+
+def generate_lottery_numbers():
+    lottery_numbers = []
+    for count in range(7):
+        number = random.randint(0,9)
+        lottery_numbers.append(number)
+    return (lottery_numbers)
+
+def print_numbers (lottery_numbers):
+    for count in range (len(lottery_numbers)):
+        print(lottery_numbers [count], end = '  ')
+
+def main():
+    lottery_numbers = []
+    lottery_numbers = generate_lottery_numbers ()
+    print('Randomly generated lottery numbers: ')
+    print_numbers(lottery_numbers)
+    
+main()
