@@ -1,0 +1,22 @@
+# This program is going to assume that there are two semesters in one year at this university. 
+print('Hello! The tuition rates at SU are increasing by 2% annually for the next five years.'
+' To help students financially prepare and adjust, we have projected the semester tuition rates below.'
+'Please be advised that the rates below are based on 2 semesters per year. If you have '
+'questions, please reach out to the academic office and they will be happy to assist.\n')
+
+# variables 
+current_yearly_tuition = 25000
+total_semesters = 2 
+semester_tuition = current_yearly_tuition / total_semesters
+increase_rate = .02
+
+# current baseline annual tuition rate.
+print('The current yearly tuition is', (f' ${current_yearly_tuition : ,.2f}'))
+
+# current baseline semester rate.
+print('\nThe current cost of tuition per semester is', (f' ${semester_tuition : ,.2f} \n'))
+
+# count-controlled loop calculating cost of tuition per semester for the next five years. 
+for year in range (1,6):
+    semester_tuition += semester_tuition * (increase_rate)
+    print('The tuition will be', (f' ${semester_tuition : ,.2f}' ) , 'per semester for year', year )
