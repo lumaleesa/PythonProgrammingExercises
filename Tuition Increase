@@ -1,0 +1,27 @@
+#At one college, the tuition for a full-time student is $8,000 per semester.
+#It has been announced that the tuition will increase by 3 percent each year
+#for the next 5 years. Write a program with a loop that displays the projected
+#semester tuition amount for the next 5 years.
+
+#This program is going to assume that there are 2 semesters in one year
+#at this university.
+print("Hello! The tuition rates are increasing by 3% each year"
+      " for the next 5 years. This program will display the projected semester"
+      " tuition for the next 5 years. \n")
+
+#variables
+current_yr_tuition = 16000
+total_semesters = 2
+semester_tuition = current_yr_tuition / total_semesters
+increase_rate = .03
+
+#current baseline annual tuition rate
+print("The current annual tuition is", (f' ${current_yr_tuition : ,.2f}'))
+
+#current baseline semester rate
+print ("\nThe current cost of tuition per semester is", (f' ${semester_tuition: ,.2f}'))
+
+#for loop calculating cost of tuition per semester for next 5 yr
+for year in range (1,6):
+    semester_tuition += semester_tuition * (increase_rate)
+    print("The tuition will be", (f' ${semester_tuition : ,.2f}'), "per semester for year",year)
