@@ -1,0 +1,25 @@
+print('Welcome to my generation program')
+birth_year = int(input('What year were you born? '))
+if birth_year <= 1945:
+    generation = 'The Silent Generation'
+elif 1946 <= birth_year <= 1964:
+    generation = 'Baby Boomers'
+elif 1965 <= birth_year <= 1980:
+    generation = 'Gen X'
+    if 1975 <= birth_year <= 1983:
+        generation += ' (Xennial)'
+elif 1981 <= birth_year <= 1996:
+    generation = 'Millennials'
+    if 1977 <= birth_year <= 1983:
+        generation += ' (Xennials)'
+    if 1993 <= birth_year <= 1998:
+        generation += '(Zillennials)'
+elif 1997 <= birth_year <= 2012:
+    generation = 'Gen Z'
+    if 1993 <= birth_year <= 1998:
+        generation += '(Zillennials)'
+elif 2012 <= birth_year <= 2025:
+    generation = 'Gen Alpha'
+else:
+    generation = 'Unknown'
+print('You are categorized as:', generation)
