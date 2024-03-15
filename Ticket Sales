@@ -1,0 +1,39 @@
+import math
+
+print('Hello!\n')
+
+# Ticket prices
+price_A = 20
+price_B = 15
+price_C = 10
+
+# multiply function used in calculations 
+def multiply (number1, number2) : 
+    result = number1 * number2
+    return result 
+    
+# Asks user to input the ticket sales for each section. If the user enters an invalid number
+# it will ask them to re-enter the correct number 
+tickets_A = int(input('Please enter the number of tickets sold for section A: '))
+while tickets_A >300 :
+    print('ERROR: The number you entered is invalid.')
+    tickets_A = int(input('Please enter the correct number of ticket sales for section A: '))
+
+tickets_B = int(input('Please enter the number of tickets sold for section B: '))
+while tickets_B >500 :
+    print('ERROR: The number you entered is invalid.')
+    tickets_B = int(input('Please enter the number of tickets sold for section B: '))
+    
+tickets_C = int(input('Please enter the number of tickets sold for section C: '))
+while tickets_C >200 :
+    print('ERROR: The number you entered is invalid.')
+    tickets_C = int(input('Please enter the number of tickets sold for section C: '))
+        
+# Calculation for income per section
+tickets_total_sec_A = multiply (tickets_A, price_A)
+tickets_total_sec_B = multiply (tickets_B, price_B)
+tickets_total_sec_C = multiply (tickets_C, price_C)
+    
+# Calculation for total income 
+total_income = tickets_total_sec_A + tickets_total_sec_B + tickets_total_sec_C
+print('\nThe income generated from ticket sales is: $', total_income)
