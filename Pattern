@@ -1,0 +1,17 @@
+#14. Write a program that uses nested loops to draw this pattern:
+
+     #*******
+     #******
+     #*****
+     #****
+     #***
+     #**
+     #*
+
+
+base_size =7
+
+for r in range (base_size):
+    for c in range(7 - r):
+        print("*", end= '')
+    print()
